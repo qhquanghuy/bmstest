@@ -4,7 +4,7 @@
  * File Created: Sunday, 9th December 2018 2:26:50 pm
  * Author: huynguyen (qhquanghuy96@gmail.com)
  * -----
- * Last Modified: Sunday, 9th December 2018 2:49:33 pm
+ * Last Modified: Sunday, 9th December 2018 3:02:29 pm
  * Modified By: huynguyen (qhquanghuy96@gmail.com)
  * -----
  */
@@ -130,7 +130,7 @@ app.get("/", (req, res) => {
 app.get("/privacy", (req, res) => {
     res.send(html)
 })
-
-app.listen(8080, () => {
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number, () => {
     console.log("listening")
 })
